@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="360" viewBox="0 0 1200 360"
+     role="img" aria-labelledby="title desc">
+  <title id="title">DSH-Launcher — double-click to start the DeepSeek Harness web UI, close the browser to stop it cleanly</title>
+  <desc id="desc">A single-exe Windows launcher for the dsh web UI. Left: name and promise. Right: a simplified dsh-launcher.log showing start, ready, browser open, browser closed, and zero-residue shutdown.</desc>
+
+  <rect width="1200" height="360" rx="26" fill="#0d1117"/>
+
+  <!-- left: identity -->
+  <g id="title-block" transform="translate(64 0)">
+    <text x="0" y="84" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" fill="#8b949e" letter-spacing="2">WINDOWS · RUST · SINGLE-EXE LAUNCHER</text>
+
+    <text x="0" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="58" font-weight="800" fill="#f0f6fc">DSH-Launcher</text>
+
+    <text x="0" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#8b949e">Double-click to start the dsh web UI —</text>
+    <text x="0" y="222" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#8b949e">close the browser and the service shuts</text>
+    <text x="0" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#8b949e">itself down. Zero residue.</text>
+
+    <rect x="0" y="268" width="560" height="1" fill="#21262d"/>
+
+    <text x="0" y="290" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" fill="#c9d1d9"><tspan fill="#4d6bfe">✓ </tspan>JobObject cleanup</text>
+    <text x="300" y="290" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" fill="#c9d1d9"><tspan fill="#4d6bfe">✓ </tspan>Tray-icon exit</text>
+    <text x="0" y="318" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" fill="#c9d1d9"><tspan fill="#4d6bfe">✓ </tspan>~360 KB single exe</text>
+    <text x="300" y="318" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" fill="#c9d1d9"><tspan fill="#4d6bfe">✓ </tspan>No console flash</text>
+  </g>
+
+  <!-- right: real log output -->
+  <g id="log-proof">
+    <rect x="680" y="52" width="464" height="248" rx="12" fill="#161b22" stroke="#30363d"/>
+
+    <circle cx="700" cy="82" r="5" fill="#ff5f57"/>
+    <circle cx="716" cy="82" r="5" fill="#febc2e"/>
+    <circle cx="732" cy="82" r="5" fill="#28c840"/>
+    <text x="754" y="88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#8b949e">dsh-launcher.log</text>
+    <rect x="680" y="98" width="464" height="1" fill="#21262d"/>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">
+      <text x="700" y="136" fill="#6e7681">[07:44:00]</text>
+      <text x="800" y="136" fill="#4d6bfe">[INFO]</text>
+      <text x="860" y="136" fill="#b3bdca">目标地址: 127.0.0.1:8899</text>
+
+      <text x="700" y="161" fill="#6e7681">[07:44:02]</text>
+      <text x="800" y="161" fill="#4d6bfe">[INFO]</text>
+      <text x="860" y="161" fill="#b3bdca">命中 PATH: dsh.cmd</text>
+
+      <text x="700" y="186" fill="#6e7681">[07:44:05]</text>
+      <text x="800" y="186" fill="#4d6bfe">[INFO]</text>
+      <text x="860" y="186" fill="#3fb950">服务已就绪</text>
+
+      <text x="700" y="211" fill="#6e7681">[07:44:05]</text>
+      <text x="800" y="211" fill="#4d6bfe">[INFO]</text>
+      <text x="860" y="211" fill="#b3bdca">浏览器已打开</text>
+
+      <text x="700" y="236" fill="#6e7681">[07:44:05]</text>
+      <text x="800" y="236" fill="#4d6bfe">[INFO]</text>
+      <text x="860" y="236" fill="#b3bdca">关浏览器 → 自动停服</text>
+
+      <text x="700" y="261" fill="#6e7681">[07:44:37]</text>
+      <text x="800" y="261" fill="#4d6bfe">[INFO]</text>
+      <text x="860" y="261" fill="#b3bdca">浏览器已关闭,正在停服</text>
+
+      <text x="700" y="286" fill="#6e7681">[07:44:37]</text>
+      <text x="800" y="286" fill="#4d6bfe">[INFO]</text>
+      <text x="860" y="286" fill="#3fb950">已退出,零残留</text>
+      <rect x="988" y="270" width="8" height="18" fill="#4d6bfe"/>
+    </g>
+  </g>
+</svg>

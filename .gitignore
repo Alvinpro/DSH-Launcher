@@ -1,0 +1,9 @@
+/target
+/config.json
+/dsh-launcher.log
+design/
+/*.ps1
+node_modules/
+*.tgz
+
+*.log

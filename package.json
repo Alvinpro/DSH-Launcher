@@ -1,0 +1,18 @@
+{
+  "name": "dsh-launcher",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "index.js",
+  "files": ["index.js", "lib", "dist", "cordis.patch.yml"],
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": ["dsh", "dsh-plugin", "launcher", "deepseek-harness"],
+  "license": "MIT",
+  "description": "DSH plugin bundle: ships dsh-launcher.exe and creates a Windows desktop shortcut. 作为分发渠道,随包提供 DSH-Launcher 并在桌面创建快捷方式。"
+}

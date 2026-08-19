@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="400" viewBox="0 0 1200 400"
+     role="img" aria-labelledby="title desc">
+  <title id="title">DSH-Launcher lifecycle: probe, resolve, launch, ready, browser-linked shutdown, JobObject cleanup</title>
+  <desc id="desc">Six-step lifecycle from double-click to zero residue: port probe, dsh resolution chain, hidden launch with JobObject binding, TCP+HTTP readiness probe, browser-linked auto shutdown with resident-mode fallback, and JobObject tree cleanup on every exit path.</desc>
+
+  <rect width="1200" height="400" rx="26" fill="#0d1117"/>
+
+  <!-- header -->
+  <g id="wf-header" transform="translate(64 0)">
+    <text x="0" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="40" font-weight="700" fill="#f0f6fc">How it works</text>
+    <text x="0" y="92" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" fill="#8b949e">双击 → 就绪 → 使用 → 干净退出</text>
+  </g>
+
+  <!-- row 1 -->
+  <g id="step-1" transform="translate(40 96)">
+    <rect width="348" height="128" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="20" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" fill="#4d6bfe">01</text>
+    <text x="20" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#e6edf3">Probe</text>
+    <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">已在运行?直接开浏览器</text>
+    <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">不拉第二个进程</text>
+  </g>
+  <text x="398" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" fill="#8b949e">→</text>
+
+  <g id="step-2" transform="translate(424 96)">
+    <rect width="348" height="128" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="20" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" fill="#4d6bfe">02</text>
+    <text x="20" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#e6edf3">Resolve</text>
+    <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">config → vendor → PATH</text>
+    <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">→ npx 自动拉取</text>
+  </g>
+  <text x="782" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" fill="#8b949e">→</text>
+
+  <g id="step-3" transform="translate(808 96)">
+    <rect width="348" height="128" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="20" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" fill="#4d6bfe">03</text>
+    <text x="20" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#e6edf3">Launch</text>
+    <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">CREATE_NO_WINDOW 隐藏拉起</text>
+    <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">JobObject 拴住整棵进程树</text>
+  </g>
+  <text x="962" y="246" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" fill="#8b949e">↓</text>
+
+  <!-- row 2 -->
+  <g id="step-4" transform="translate(808 252)">
+    <rect width="348" height="128" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="20" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" fill="#4d6bfe">04</text>
+    <text x="20" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#e6edf3">Ready</text>
+    <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">TCP + HTTP 双校验就绪</text>
+    <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">浏览器前台唤起</text>
+  </g>
+  <text x="758" y="320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" fill="#8b949e">→</text>
+
+  <g id="step-5" transform="translate(424 252)">
+    <rect width="348" height="128" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="20" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" fill="#4d6bfe">05</text>
+    <text x="20" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#e6edf3">Linked</text>
+    <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">关浏览器 → 自动停服</text>
+    <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">共享实例降级常驻,托盘退出</text>
+  </g>
+  <text x="374" y="320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" fill="#8b949e">→</text>
+
+  <g id="step-6" transform="translate(40 252)">
+    <rect width="348" height="128" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="20" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" fill="#4d6bfe">06</text>
+    <text x="20" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#e6edf3">Cleanup</text>
+    <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">任何退出路径(正常/托盘/强杀)</text>
+    <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8b949e">JobObject 连根终止,零残留</text>
+  </g>
+</svg>

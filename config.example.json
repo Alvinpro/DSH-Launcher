@@ -1,0 +1,8 @@
+{
+  "dsh_path": "",
+  "url": "http://127.0.0.1:8899",
+  "port": 8899,
+  "timeout_secs": 40,
+  "package": "dsh",
+  "args": ["web", "--port", "8899"]
+}
